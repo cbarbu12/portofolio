@@ -4586,7 +4586,6 @@
         (function(t) {
             + function(t) {
                 "use strict";
-
                 function e(e) {
                     return this.each(function() {
                         var i = t(this),
