@@ -40,7 +40,6 @@ def submit_form():
 @app.route('/about.html')
 def about():
     return render_template('about.html')
-<<<<<<< HEAD
 @app.route('/contact.html')
 def contact():
     return render_template('contact.html')
