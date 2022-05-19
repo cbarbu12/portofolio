@@ -50,21 +50,6 @@ def comp():
 @app.route('/work.html')
 def work():
     return render_template('work.html')
-=======
-
-@app.route('/contact.html')
-def contact():
-    return render_template('contact.html')
-
-@app.route('/components.html')
-def comp():
-    return render_template('components.html')
-
-@app.route('/work.html')
-def work():
-    return render_template('work.html')
-
->>>>>>> da5649480a8b6eaa2b1851c1d67dc712c0d490cf
 @app.route('/works.html')
 def works():
     return render_template('works.html')
