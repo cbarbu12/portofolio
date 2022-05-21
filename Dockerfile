@@ -1,14 +1,12 @@
-FROM python:3
+FROM python:3.8-slim-buster
 
-LABEL org.opencontainers.image.title="Cristian's portofolio"
-LABEL org.opencontainers.image.authors="@cristibarbu"
+WORKDIR /app
 
-WORKDIR /usr/src/app
-
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
 
 COPY . .
+
 ENV FLASK_APP=server.py
-ENV FLASK_ENV="production"
-CMD [ "flask", "run" , "-h", "localhost", "-p", "5000"]
+
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
